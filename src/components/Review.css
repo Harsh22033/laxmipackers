@@ -1,0 +1,142 @@
+.reviews-container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Slideshow Container */
+.reviews-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+/* Review Cards */
+.review-cards {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Review Card */
+.review-card {
+    flex: 1;
+    min-width: 30%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ffdd57, #FFA500);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Add Review Section */
+.add-review {
+    margin-top: 2rem;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Inputs in One Line */
+.input-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 48%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 50px;
+}
+
+/* Submit Button */
+.add-review button {
+    background: #ffdd57;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: 0.3s;
+}
+
+.add-review button:hover {
+    background: #ffaa00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1.5rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+    }
+}
