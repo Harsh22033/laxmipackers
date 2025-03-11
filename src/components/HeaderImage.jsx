@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeaderImage.css";
-import headerImage from "../download.jpg"; // Ensure the correct path
+import headerImage from "/download.jpg";  // Absolute path
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"; // Import icons
 
 const HeaderImage = () => {
